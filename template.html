@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="styles/template.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+  <div id="rolling"><div id="top-nav">
+    <div id="logo-header" class="top-item"><a href="index.html"><img src="../lawlessheaven/images/LAWLESSHEAVEN.png"></a><div class="trash">
+        <img src="../lawlessheaven/images/trash.png"></div></div>
+    <input id="menu-toggle" type="checkbox" />
+    <label class='menu-button-container' for="menu-toggle">
+    <div class='menu-button'></div>
+    </label>
+    <ul class="menu">
+        <li>TOPS</li>
+        <li>BOTTOMS</li>
+        <li>LOOKBOOK</li>
+        <li>INFO</li>
+    </ul>
+  </div></div>
+    <header>
+        <nav id="left">
+            <div>TOPS</div>
+            <div>BOTTOMS</div>
+        </nav>
+        <div id="logo"> <a href="index.html"><img src="./images/LAWLESSHEAVEN.png" alt="LAWLESS-HEAVEN" id="logo-logo"></a> </div>
+        <nav id="right">
+            <div>LOOKBOOK</div>
+            <div>INFO</div>
+        </nav>
+        <div class="trash"><img src="./images/trash.png"></div>
+    </header>
+    <div class="container-container"><div class="slideshow-container">
+
+      <!-- Full-width images with number and caption text -->
+      <div class="mySlides fade">
+        <div class="numbertext">1 / 3</div>
+        <img src="../lawlessheaven/images/halk-futbolkakopiya.png" style="width:100%">
+        <div class="text" class="price">17 999 руб.</div>
+      </div>
+    
+      <div class="mySlides fade">
+        <div class="numbertext">2 / 3</div>
+        <img src="../lawlessheaven/images/halk-na-futba-kopiya-kopiya.png" style="width:100%">
+        <div class="text" class="price">17 999 руб.</div>
+      </div>
+    
+      <div class="mySlides fade">
+        <div class="numbertext">3 / 3</div>
+        <img src="../lawlessheaven/images/halkshtanv-scaled.jpg" style="width:100%">
+        <div class="text" class="price">17 999 руб.</div>
+      </div>
+    
+      <!-- Next and previous buttons -->
+      <div class="prev"><a class="prev" onclick="plusSlides(-1)">&#10094;</a></div>
+      <div class="next"><a class="next" onclick="plusSlides(1)">&#10095;</a></div>
+    </div></div>
+    
+    <!-- The dots/circles -->
+  
+    <script>let slideIndex = 1;
+      showSlides(slideIndex);
+      
+      function plusSlides(n) {
+        showSlides(slideIndex += n);
+      }
+      
+      function currentSlide(n) {
+        showSlides(slideIndex = n);
+      }
+      
+      function showSlides(n) {
+        let i;
+        let slides = document.getElementsByClassName("mySlides");
+        let dots = document.getElementsByClassName("dot");
+        if (n > slides.length) {slideIndex = 1}    
+        if (n < 1) {slideIndex = slides.length}
+        for (i = 0; i < slides.length; i++) {
+          slides[i].style.display = "none";  
+        }
+        for (i = 0; i < dots.length; i++) {
+          dots[i].className = dots[i].className.replace(" active", "");
+        }
+        slides[slideIndex-1].style.display = "flex";  
+        dots[slideIndex-1].className += " active";
+      }</script>
+    <section>
+        <div>
+            <div id="description" class="thirds">
+                <h1>PANTS</h1>
+                <p>Классическая модель Lawless Heaven выполнена из чёрного футера плотностью 340гр.</p>
+                <p>Длинный шнур до колена, идеальная посадка и хлопок сирейч на поясе.</p>
+                <p><br>-100% Хлопок</p>
+                <p>-Эластичный пояс с завязками</p>
+                <p>-Отделочная строчка</p>
+                <p>-Два передних прорезных кармана</p>
+                <p>-Два накладных кармана сзади на липучке</p>
+                <p>-Полностью соответствует размеру</p>
+                <p></p>
+                <p></p>
+            </div>
+            <div  class="thirds"><img src="images/halk-na-futba-kopiya-kopiya.png"><img src="images/halk-na-futba-kopiya-kopiya.png"><img src="images/halk-na-futba-kopiya-kopiya.png"></div>
+            <div  class="thirds" id="right-bar">
+                <p class="price">17 999 руб.</p>
+                <p>Выберите размер и количество</p>
+                    <div><label for="option-size"></label>
+                    <select id="option-size">
+                      
+                      <option value="XSMALL" selected="">
+                        XSMALL
+                      </option>
+                      
+                      <option value="SMALL">
+                        SMALL
+                      </option>
+                      
+                      <option value="MEDIUM">
+                        MEDIUM
+                      </option>
+                      
+                      <option value="LARGE">
+                        LARGE
+                      </option>
+                      
+                      <option value="XLARGE">
+                        XLARGE
+                      </option>
+                      
+                    </select>
+                    
+                        <label for="quantity"></label>
+                        <input class="select-on-focus" type="text" size="3" id="quantity" name="quantity" value="1">
+                    </div>
+                    <p>На данный момент продажи ведутся в группе <strong>VK</strong></p>
+                </div>
+        </div>
+        
+    </section>
+    <footer>
+        <div>© 2022, LAWLESS HEAVEN</div>
+        <div>
+            <div><a href="https://vk.com/lawlessheavenru" target="_blank"><img src="images/vkontakte.png" alt="vk-link" class="icon"></a>
+            </div>
+            <div><a href="https://t.me/lawlessheavenru" target="_blank"><img src="images/telegram-app.png" alt="telegram-link" class="icon"></a></div>
+        </div>
+    </footer>
+</body>
+</html>
